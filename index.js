@@ -7,7 +7,10 @@ const userRoute = require("./routes/user");
 const productRoute = require("./routes/product");
 const cartRoute = require("./routes/cart");
 const orderRoute = require("./routes/order");
+const cors = require("cors");
 
+
+app.use(cors());
 dotenv.config();
 
 mongoose.connect(process.env.MONGO_URL, {
